@@ -14,9 +14,9 @@
 </p>
 
 <p align="center">
-  <a href="https://luckychou.gitbook.io/blog/">Blog</a>
+  <a href="https://luckychou.gitbook.io/blog/">博客</a>
   ·
-  <a href="https://juejin.cn/user/1574156383563496">JueJin</a>
+  <a href="https://juejin.cn/user/1574156383563496">掘金</a>
   <br>
   <br>
 </p>
@@ -38,16 +38,16 @@
 
 #### Done
 
-- [x] graduating 🥂🧱👷🏿‍♂️
+- [x] 毕业啦 🥂🧱👷🏿‍♂️
 
 ### 2022
 
 #### Todo
 
-- [ ] Learn Angular
+- [ ] 学习 Angular
 
 #### Done
 
-- [x] React Booklet [掘金小册](https://juejin.cn/column/6960832559445966861)
+- [x] 整理 React 小册 [掘金小册](https://juejin.cn/column/6960832559445966861)
 
 ![](https://cdn.jsdelivr.net/gh/rick-chou/rick-assets/jpg/42.jpg)
