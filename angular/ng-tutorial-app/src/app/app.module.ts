@@ -14,24 +14,16 @@ import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 
-import { RouterBasicRouteComponent } from './pages/router/basic-route/basic-route.component';
-import { RouterNestingRoutesComponent } from './pages/router/nesting-routes/nesting-routes.component';
-import { RouterPageAComponent } from './pages/router/nesting-routes/page-a/page-a.component';
-import { RouterPageA1Component } from './pages/router/nesting-routes/page-a/page-a-1/page-a-1.component';
-import { RouterPageA2Component } from './pages/router/nesting-routes/page-a/page-a-2/page-a-2.component';
-import { RouterPageBComponent } from './pages/router/nesting-routes/page-b/page-b.component';
+import { RouterNestingRoutesComponent } from './routing/nesting-routes/nesting-routes.component';
+import { RouterPageAComponent } from './routing/nesting-routes/page-a/page-a.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    RouterBasicRouteComponent,
     RouterNestingRoutesComponent,
     RouterPageAComponent,
-    RouterPageA1Component,
-    RouterPageA2Component,
-    RouterPageBComponent,
   ],
   imports: [
     BrowserModule,
