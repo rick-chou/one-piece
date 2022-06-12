@@ -2,13 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { RouterBasicRouteComponent } from './basic-route/basic-route.component';
+// import { RouterBasicRouteComponent } from './basic-route/basic-route.component';
 import { RouterNestingRoutesComponent } from './nesting-routes/nesting-routes.component';
 import { RouterPageAComponent } from './nesting-routes/page-a/page-a.component';
 import { RouterPageA1Component } from './nesting-routes/page-a/page-a-1/page-a-1.component';
 import { RouterPageA2Component } from './nesting-routes/page-a/page-a-2/page-a-2.component';
-import { RouterPageBComponent } from './nesting-routes/page-b/page-b.component';
+// import { RouterPageBComponent } from './nesting-routes/page-b/page-b.component';
 import { RouterInformationComponent } from './route-information/route-information.component';
+import { RouteGuardsComponent } from './route-guards/route-guards.component';
+import { GuardCanActivateComponent } from './route-guards/canActivate/canActivate.component';
+import { GuardCanActivateChildComponent } from './route-guards/canActivateChild/canActivateChild.component';
+import { GuardCanDeactivateComponent } from './route-guards/canDeactivate/canDeactivate.component';
+import { GuardCanLoadComponent } from './route-guards/canLoad/canLoad.component';
 
 const routes: Routes = [
   {
@@ -59,6 +64,28 @@ const routes: Routes = [
       {
         path: 'information',
         component: RouterInformationComponent,
+      },
+      {
+        path: 'guards',
+        component: RouteGuardsComponent,
+        children: [
+          {
+            path: 'canActivate',
+            // canActivate: [],
+            component: GuardCanActivateComponent,
+          },
+          {
+            path: 'canDeActivate',
+            // canDeactivate: [],
+            component: GuardCanDeactivateComponent,
+          },
+          { path: 'canLoad', canLoad: [], component: GuardCanLoadComponent },
+          {
+            path: 'canActivateChild',
+            // canActivateChild: [],
+            component: GuardCanActivateChildComponent,
+          },
+        ],
       },
     ],
   },
