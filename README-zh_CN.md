@@ -1,17 +1,22 @@
-<h1 align="center">ONE PIECE - 🏴‍☠️</h1>
+<h1 align="center">ONE PIECE - ALL IN ONE 🏴‍☠️ </h1>
 
 <p align="center">
-  <img src="aio/src/assets/images/logos/angular/angular.png" alt="angular-logo" width="120px" height="120px"/>
+  <a href="./README.md">English</a> | 简体中文
+</p>
+
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/rick-chou/rick-assets/png/28.png" alt="" height="60px"/>
   <br>
   <i>Abandon all the past and bonds, don't begrudge the tears shed for the dream 
     <br> - Luffy.</i>
   <br>
 </p>
 
-<p align="center">
-  <a href="https://www.angular.io"><strong>www.angular.io</strong></a>
+<!-- 个人网站  -->
+<!-- <p align="center">
+  <a href=""><strong></strong></a>
   <br>
-</p>
+</p> -->
 
 <p align="center">
   <a href="https://luckychou.gitbook.io/blog/">博客</a>
@@ -45,6 +50,7 @@
 #### Todo
 
 - [ ] 学习 Angular
+- [ ] 学习 Canvas / SVG
 
 #### Done
 
