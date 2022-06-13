@@ -1,0 +1,83 @@
+<canvas width="300" height="300" id="tutorial-1"></canvas>
+<canvas width="300" height="300" id="tutorial-2"></canvas>
+<canvas width="300" height="300" id="tutorial-3"></canvas>
+<canvas width="300" height="300" id="tutorial-4"></canvas>
+
+<script>
+  var canvas = document.querySelector('#tutorial-1');
+  var ctx = canvas.getContext('2d');
+  ctx.beginPath();
+  ctx.moveTo(10, 10);
+  ctx.lineTo(100, 10);
+  // 设置线宽
+  ctx.lineWidth = 10;
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(110, 10);
+  ctx.lineTo(160, 10);
+  ctx.lineWidth = 20;
+  ctx.stroke();
+</script>
+
+<script>
+  var canvas = document.querySelector('#tutorial-2');
+  var ctx = canvas.getContext('2d');
+
+  var lineCaps = ['butt', 'round', 'square'];
+  // butt：线段末端以方形结束
+  // round：线段末端以圆形结束
+  // square：线段末端以方形结束，但是增加了一个宽度和线段相同，高度是线段厚度一半的矩形区域
+
+  for (var i = 0; i < 3; i++) {
+    ctx.beginPath();
+    ctx.moveTo(20 + 30 * i, 30);
+    ctx.lineTo(20 + 30 * i, 100);
+    ctx.lineWidth = 20;
+    // 设置线条末端样式
+    ctx.lineCap = lineCaps[i];
+    ctx.stroke();
+  }
+
+  ctx.beginPath();
+  ctx.moveTo(0, 30);
+  ctx.lineTo(300, 30);
+
+  ctx.moveTo(0, 100);
+  ctx.lineTo(300, 100);
+
+  ctx.strokeStyle = 'red';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+</script>
+
+<script>
+  var canvas = document.querySelector('#tutorial-3');
+  var ctx = canvas.getContext('2d');
+
+  var lineJoin = ['round', 'bevel', 'miter'];
+  // round 通过填充一个额外的，圆心在相连部分末端的扇形，绘制拐角的形状。 圆角的半径是线段的宽度。
+  // bevel 在相连部分的末端填充一个额外的以三角形为底的区域， 每个部分都有各自独立的矩形拐角。
+  // miter(默认) 通过延伸相连部分的外边缘，使其相交于一点，形成一个额外的菱形区域。
+
+  ctx.lineWidth = 20;
+
+  for (var i = 0; i < lineJoin.length; i++) {
+    ctx.lineJoin = lineJoin[i];
+    ctx.beginPath();
+    ctx.moveTo(50, 50 + i * 50);
+    ctx.lineTo(100, 100 + i * 50);
+    ctx.lineTo(150, 50 + i * 50);
+    ctx.lineTo(200, 100 + i * 50);
+    ctx.lineTo(250, 50 + i * 50);
+    ctx.stroke();
+  }
+</script>
+
+<script>
+  var canvas = document.querySelector('#tutorial-4');
+  var ctx = canvas.getContext('2d');
+  ctx.setLineDash([20, 5]); // [实线长度, 间隙长度]
+  ctx.lineDashOffset = -0;
+  ctx.strokeRect(50, 50, 210, 210);
+</script>

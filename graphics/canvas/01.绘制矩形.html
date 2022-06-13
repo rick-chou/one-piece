@@ -1,0 +1,16 @@
+<!-- default width:300px height:150px -->
+<canvas id="tutorial" width="300" height="300"></canvas>
+
+<script>
+  // canvas只支持一种原生的图形绘制：矩形
+  // 1、fillRect(x, y, width, height)：绘制一个填充的矩形。
+  // 2、strokeRect(x, y, width, height)：绘制一个矩形的边框。
+  // 3、clearRect(x, y, width, height)：清除指定的矩形区域，然后这块区域会变的完全透明。
+  var canvas = document.querySelector('#tutorial');
+  var ctx = canvas.getContext('2d');
+  ctx.fillStyle = 'rgb(200,0,0)';
+  //绘制矩形
+  ctx.fillRect(10, 10, 55, 50);
+  ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
+  ctx.fillRect(30, 30, 55, 50);
+</script>

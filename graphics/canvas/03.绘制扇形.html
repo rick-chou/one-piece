@@ -1,0 +1,30 @@
+<script>
+  // arc(x, y, r, startAngle, endAngle, anticlockwise)
+  // 以(x, y) 为圆心，以r 为半径，从 startAngle 弧度开始到endAngle弧度结束。anticlockwise 是布尔值，true 表示逆时针，false 表示顺时针(默认是顺时针)
+
+  // arcTo(x1, y1, x2, y2, radius)
+  //
+</script>
+
+<canvas id="tutorial" width="300" height="300"></canvas>
+
+<script>
+  var canvas = document.getElementById('tutorial');
+  var ctx = canvas.getContext('2d');
+  ctx.beginPath();
+  ctx.arc(50, 50, 40, 0, Math.PI / 2, false);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(150, 50, 40, 0, -Math.PI / 2, true);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(50, 150, 40, -Math.PI / 2, Math.PI / 2, false);
+  ctx.fill();
+
+  ctx.beginPath();
+  ctx.arc(150, 150, 40, 0, Math.PI, false);
+  ctx.fill();
+</script>
