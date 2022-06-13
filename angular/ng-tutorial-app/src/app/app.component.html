@@ -38,10 +38,10 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+      <li nz-submenu nzOpen nzTitle="HttpClient" nzIcon="form">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/aa">Basic Form</a>
+            <a routerLink="/http">Http Client</a>
           </li>
         </ul>
       </li>
@@ -57,6 +57,14 @@
             [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
           ></i>
         </span>
+        <button
+          nz-button
+          nzType="primary"
+          nzDanger
+          (click)="isLoggedIn ? logout() : login()"
+        >
+          {{ isLoggedIn ? "Logout" : " Login" }}
+        </button>
       </div>
     </nz-header>
     <nz-content>

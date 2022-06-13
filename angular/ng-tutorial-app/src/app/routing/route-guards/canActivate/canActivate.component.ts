@@ -9,9 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class GuardCanActivateComponent implements OnInit {
   validateForm!: FormGroup;
   isLogin: boolean = false;
-  submitForm(): void {
+  show = true;
+  login(): void {
     if (this.validateForm.valid) {
       sessionStorage.setItem('cantActivate', this.validateForm.value);
+      this.isLogin = true;
     } else {
       Object.values(this.validateForm.controls).forEach((control) => {
         if (control.invalid) {
@@ -23,6 +25,7 @@ export class GuardCanActivateComponent implements OnInit {
   }
   clearCredentials() {
     sessionStorage.removeItem('cantActivate');
+    this.isLogin = false;
   }
   constructor(private fb: FormBuilder) {}
   ngOnInit(): void {

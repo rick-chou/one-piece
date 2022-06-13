@@ -15,6 +15,8 @@ import { GuardCanActivateChildComponent } from './route-guards/canActivateChild/
 import { GuardCanDeactivateComponent } from './route-guards/canDeactivate/canDeactivate.component';
 import { GuardCanLoadComponent } from './route-guards/canLoad/canLoad.component';
 
+import { AuthGuard } from '../auth/auth.guard';
+
 const routes: Routes = [
   {
     path: '',
@@ -71,18 +73,22 @@ const routes: Routes = [
         children: [
           {
             path: 'canActivate',
-            // canActivate: [],
+            canActivate: [AuthGuard],
             component: GuardCanActivateComponent,
           },
           {
             path: 'canDeActivate',
-            // canDeactivate: [],
+            canDeactivate: [AuthGuard],
             component: GuardCanDeactivateComponent,
           },
-          { path: 'canLoad', canLoad: [], component: GuardCanLoadComponent },
+          {
+            path: 'canLoad',
+            canLoad: [AuthGuard],
+            component: GuardCanLoadComponent,
+          },
           {
             path: 'canActivateChild',
-            // canActivateChild: [],
+            canActivateChild: [AuthGuard],
             component: GuardCanActivateChildComponent,
           },
         ],

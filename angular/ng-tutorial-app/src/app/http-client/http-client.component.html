@@ -1,0 +1,12 @@
+<button nz-button nzType="primary" (click)="showConfig()">Get Config</button>
+
+<br />
+<br />
+<br />
+
+<div *ngIf="config">
+  <h2>Config</h2>
+  <h3>name:{{ config.name }}</h3>
+  <h3>theme:{{ config.theme }}</h3>
+  <h3>size:{{ config.size }}</h3>
+</div>

@@ -17,10 +17,12 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { GuardCanActivateComponent } from './routing/route-guards/canActivate/canActivate.component';
 import { RouterNestingRoutesComponent } from './routing/nesting-routes/nesting-routes.component';
 import { RouterPageAComponent } from './routing/nesting-routes/page-a/page-a.component';
 import { RouteGuardsComponent } from './routing/route-guards/route-guards.component';
+import { HttpClientComponent } from './http-client/http-client.component';
 
 registerLocaleData(en);
 
@@ -31,6 +33,8 @@ registerLocaleData(en);
     RouterPageAComponent,
     GuardCanActivateComponent,
     RouteGuardsComponent,
+    LoginComponent,
+    HttpClientComponent,
   ],
   imports: [
     BrowserModule,
