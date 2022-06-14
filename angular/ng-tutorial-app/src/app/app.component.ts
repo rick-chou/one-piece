@@ -9,7 +9,7 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent {
   constructor(public authService: AuthService, public router: Router) {}
-  isCollapsed = false;
+  isCollapsed = true;
   isLoggedIn = this.authService.isLoggedIn;
   login(): void {
     this.router.navigate(['/login']);

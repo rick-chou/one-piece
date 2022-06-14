@@ -22,6 +22,8 @@
 }
 
 .header-trigger {
+  display: flex;
+  align-items: center;
   height: 64px;
   padding: 20px 24px;
   font-size: 20px;
@@ -67,9 +69,13 @@ nz-header {
 }
 
 .app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   height: 64px;
   padding: 0;
+  padding-right: 30px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 }
@@ -82,4 +88,7 @@ nz-content {
   padding: 24px;
   background: #fff;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

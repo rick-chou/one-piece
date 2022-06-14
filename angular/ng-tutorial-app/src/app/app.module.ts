@@ -14,6 +14,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,8 @@ import { RouterNestingRoutesComponent } from './routing/nesting-routes/nesting-r
 import { RouterPageAComponent } from './routing/nesting-routes/page-a/page-a.component';
 import { RouteGuardsComponent } from './routing/route-guards/route-guards.component';
 import { HttpClientComponent } from './http-client/http-client.component';
+import { ChartsComponent } from './charts/charts.component';
+import { RxJSComponent } from './rxjs/rxjs.component';
 
 registerLocaleData(en);
 
@@ -35,6 +38,8 @@ registerLocaleData(en);
     RouteGuardsComponent,
     LoginComponent,
     HttpClientComponent,
+    ChartsComponent,
+    RxJSComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,9 @@ registerLocaleData(en);
     NzFormModule,
     NzInputModule,
     NzButtonModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent],

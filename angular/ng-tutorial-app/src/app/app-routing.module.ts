@@ -3,7 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+// Http Client
 import { HttpClientComponent } from './http-client/http-client.component';
+
+// Charts
+import { ChartsComponent } from './charts/charts.component';
+import { G2LineComponent } from './charts/g2/line.component';
+import { EchartsLineComponent } from './charts/echarts/line.component';
+
+// RxJS
+import { RxJSComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
@@ -24,6 +34,24 @@ const routes: Routes = [
   {
     path: 'http',
     component: HttpClientComponent,
+  },
+  {
+    path: 'charts',
+    component: ChartsComponent,
+    children: [
+      {
+        path: 'g2-line',
+        component: G2LineComponent,
+      },
+      {
+        path: 'echarts-line',
+        component: EchartsLineComponent,
+      },
+    ],
+  },
+  {
+    path: 'rxjs',
+    component: RxJSComponent,
   },
   {
     path: '**',
