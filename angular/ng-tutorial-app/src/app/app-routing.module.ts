@@ -15,6 +15,10 @@ import { EchartsLineComponent } from './charts/echarts/line.component';
 // RxJS
 import { RxJSComponent } from './rxjs/rxjs.component';
 
+// Basic
+import { BasicSyntaxComponent } from './basic-syntax/basic-syntax.component';
+import { DirectiveComponent } from './basic-syntax/directive/directive.component';
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
   {
@@ -25,6 +29,16 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () =>
       import('./pages/welcome/welcome.module').then((m) => m.WelcomeModule),
+  },
+  {
+    path: 'basic-syntax',
+    component: BasicSyntaxComponent,
+    children: [
+      {
+        path: 'directive',
+        component: DirectiveComponent,
+      },
+    ],
   },
   {
     path: 'routing',

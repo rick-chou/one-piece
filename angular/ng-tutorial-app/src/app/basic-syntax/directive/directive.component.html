@@ -1,0 +1,67 @@
+<div class="flex flex-wrap items-center justify-center">
+  <nz-card style="width: 400px; height: 250px" nzTitle="ngIf vs hidden">
+    <div class="flex justify-center items-center">
+      <div class="flex-1">
+        <div *ngIf="isShow; else hiddenBlock">SHOW</div>
+        <ng-template #hiddenBlock><div>HIDDEN</div></ng-template>
+      </div>
+      <div class="flex-1">
+        <div [hidden]="!isShow">SHOW</div>
+        <div [hidden]="isShow">HIDDEN</div>
+      </div>
+    </div>
+    <button nz-button nzType="primary" (click)="handleToggle()" class="my-8">
+      Toggle
+    </button>
+
+    <p><strong>PS:Observe the DOM structure</strong></p>
+  </nz-card>
+
+  <nz-card
+    style="width: 400px; height: 250px"
+    nzTitle="ngSwitch & ngSwitchCase & ngSwitchDefault"
+  >
+    <div [ngSwitch]="switch_expression">
+      <div *ngSwitchCase="'switch_expression_1'">1</div>
+      <div *ngSwitchCase="'switch_expression_2'">2</div>
+      <div *ngSwitchCase="'switch_expression_3'">3</div>
+      <div *ngSwitchDefault>4</div>
+      <button
+        nz-button
+        nzType="primary"
+        (click)="handleSwitchExpression()"
+        class="my-8"
+      >
+        Add
+      </button>
+    </div>
+  </nz-card>
+
+  <nz-card style="width: 400px; height: 250px" nzTitle="ngFor">
+    <ul>
+      <li
+        *ngFor="
+          let item of lists;
+          index as i;
+          count as c;
+          even as isEven;
+          first as f
+        "
+      >
+        index{{ i }} - count{{ c }} - item{{ item }}
+        {{ isEven ? "- EVEN" : "" }}
+        {{ f ? "- FIRST" : "" }}
+      </li>
+    </ul>
+  </nz-card>
+
+  <nz-card style="width: 400px; height: 250px" nzTitle="ngClass">
+    <div [ngClass]="'red'">some text......</div>
+    <div [ngClass]="['red']">some text......</div>
+    <div [ngClass]="{ 'red font-size-18': true }">some text......</div>
+    <div [ngClass]="{ red: isRed, yellow: !isRed }">some text......</div>
+    <button nz-button nzType="primary" (click)="handleNgClass()" class="my-8">
+      Switch Color
+    </button>
+  </nz-card>
+</div>
