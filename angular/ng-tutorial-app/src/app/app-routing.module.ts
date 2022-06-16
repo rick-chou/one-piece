@@ -14,10 +14,13 @@ import { EchartsLineComponent } from './charts/echarts/line.component';
 
 // RxJS
 import { RxJSComponent } from './rxjs/rxjs.component';
+import { RxJSOperatorsComponent } from './rxjs/operators/operators.component';
+import { RxJSSubjectComponent } from './rxjs/subject/subject.component';
 
 // Basic
 import { BasicSyntaxComponent } from './basic-syntax/basic-syntax.component';
 import { DirectiveComponent } from './basic-syntax/directive/directive.component';
+import { PipeComponent } from './basic-syntax/pipe/pipe.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
@@ -37,6 +40,10 @@ const routes: Routes = [
       {
         path: 'directive',
         component: DirectiveComponent,
+      },
+      {
+        path: 'pipe',
+        component: PipeComponent,
       },
     ],
   },
@@ -66,6 +73,16 @@ const routes: Routes = [
   {
     path: 'rxjs',
     component: RxJSComponent,
+    children: [
+      {
+        path: 'operators',
+        component: RxJSOperatorsComponent,
+      },
+      {
+        path: 'subject',
+        component: RxJSSubjectComponent,
+      },
+    ],
   },
   {
     path: '**',

@@ -37,10 +37,12 @@ import { ChartsComponent } from './charts/charts.component';
 
 // rxjs
 import { RxJSComponent } from './rxjs/rxjs.component';
+import { RxJSOperatorsComponent } from './rxjs/operators/operators.component';
 
 // basic
 import { BasicSyntaxComponent } from './basic-syntax/basic-syntax.component';
 import { DirectiveComponent } from './basic-syntax/directive/directive.component';
+import { PipeComponent } from './basic-syntax/pipe/pipe.component';
 
 registerLocaleData(en);
 
@@ -55,8 +57,10 @@ registerLocaleData(en);
     HttpClientComponent,
     ChartsComponent,
     RxJSComponent,
+    RxJSOperatorsComponent,
     BasicSyntaxComponent,
     DirectiveComponent,
+    PipeComponent,
   ],
   imports: [
     BrowserModule,

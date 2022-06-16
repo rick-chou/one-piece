@@ -22,14 +22,31 @@
       nzMode="inline"
       [nzInlineCollapsed]="isCollapsed"
     >
-      <li nz-submenu nzOpen nzTitle="Basic Syntax" nzIcon="paper-clip">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="Basic Syntax"
+        nzIcon="paper-clip"
+        [(nzOpen)]="openMap['basic-syntax']"
+        (nzOpenChange)="openHandler('basic-syntax')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/basic-syntax/directive">Directive</a>
           </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/basic-syntax/pipe">Pipe</a>
+          </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Router" nzIcon="block">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="Router"
+        nzIcon="block"
+        [(nzOpen)]="openMap['router']"
+        (nzOpenChange)="openHandler('router')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/routing/basic-route">Basic Route</a>
@@ -45,31 +62,62 @@
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="HttpClient" nzIcon="swap">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="HttpClient"
+        nzIcon="swap"
+        [(nzOpen)]="openMap['http-client']"
+        (nzOpenChange)="openHandler('http-client')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/http">Http Client</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="Form"
+        nzIcon="form"
+        [(nzOpen)]="openMap['form']"
+        (nzOpenChange)="openHandler('form')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/form">Form</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Charts" nzIcon="area-chart">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="Charts"
+        nzIcon="area-chart"
+        [(nzOpen)]="openMap['charts']"
+        (nzOpenChange)="openHandler('charts')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/charts">Charts</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="RxJS" nzIcon="form">
+      <li
+        nz-submenu
+        nzOpen
+        nzTitle="RxJS"
+        nzIcon="form"
+        [(nzOpen)]="openMap['rxjs']"
+        (nzOpenChange)="openHandler('rxjs')"
+      >
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/rxjs">RxJS</a>
+            <a routerLink="/rxjs/operators">Operators</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/rxjs/subject">Subject</a>
           </li>
         </ul>
       </li>

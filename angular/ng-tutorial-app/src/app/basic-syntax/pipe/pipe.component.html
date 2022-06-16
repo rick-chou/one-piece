@@ -1,0 +1,111 @@
+<div class="flex flex-wrap items-center justify-center">
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="AsyncPipe"
+  >
+    <div>
+      <code>promise | async</code> : Wait for it... {{ asyncSign | async }}
+      <button
+        nz-button
+        nzType="primary"
+        (click)="asyncPipeClick()"
+        class="my-4"
+      >
+        Toggle
+      </button>
+      <div><code>observable|async</code>: Time: {{ time | async }}</div>
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="CurrencyPipe"
+  >
+    <p>{{ money | currency: "¥" }}</p>
+    <p>{{ money | currency }}</p>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="DatePipe"
+  >
+    <p>{{ today | date }}</p>
+    <p>{{ today | date: "fullDate" }}</p>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="I18nPluralPipe & I18nSelectPipe"
+  >
+    <div>
+      <strong>I18nPluralPipe</strong> :
+      {{ messages.length | i18nPlural: messageMapping }}
+    </div>
+    <div>
+      <strong>I18nSelectPipe</strong> : {{ gender | i18nSelect: inviteMap }}
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="JsonPipe"
+  >
+    <div>
+      <p>Without JSON pipe:</p>
+      <pre>{{ object }}</pre>
+      <p>With JSON pipe:</p>
+      <pre>{{ object | json }}</pre>
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="PercentPipe"
+  >
+    <div>
+      <p>{{ 0.1 | percent }}</p>
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="LowerCasePipe & UpperCasePipe & TitleCasePipe"
+  >
+    <div>
+      <p><strong>LowerCasePipe:</strong>{{ "Hello" | lowercase }}</p>
+      <p><strong>UpperCasePipe:</strong>{{ "hello" | uppercase }}</p>
+      <p><strong>TitleCasePipe:</strong>{{ "rick zhou" | titlecase }}</p>
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="SlicePipe"
+  >
+    <p>
+      {{ str }}[0:4]: '{{ str | slice: 0:4 }}' - output is expected to be 'abcd'
+    </p>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="KeyValuePipe"
+  >
+    <div *ngFor="let item of object | keyvalue">
+      {{ item.key }}:{{ item.value }}
+    </div>
+    <div *ngFor="let item of map | keyvalue">
+      {{ item.key }}:{{ item.value }}
+    </div>
+  </nz-card>
+
+  <nz-card
+    style="width: 15vw; height: 35vh; overflow-y: scroll"
+    nzTitle="DecimalPipe"
+  >
+    <p>1.23456789</p>
+    <p>minIntegerDigits.minFractionDigits-maxFractionDigits</p>
+    <p>default : {{ 1.23456789 | number }}</p>
+    <p>default : {{ 1.23456789 | number: "1.2-4" }}</p>
+  </nz-card>
+</div>
