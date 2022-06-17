@@ -1,0 +1,14 @@
+<nz-card>
+  <app-child
+    desc="The property given by the parent component"
+    title=" F Title "
+    (childMessage)="parentsFn($event)"
+    #timer
+  ></app-child>
+</nz-card>
+
+<nz-card>
+  <button (click)="timer.start()" nz-button>Start</button>
+  <button (click)="timer.stop()" nz-button>Stop</button>
+  <h2 class="seconds">{{ timer.seconds }}</h2>
+</nz-card>

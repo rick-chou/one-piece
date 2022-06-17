@@ -37,6 +37,14 @@
           <li nz-menu-item nzMatchRouter>
             <a routerLink="/basic-syntax/pipe">Pipe</a>
           </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/basic-syntax/lifecycle">LifeCycle</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/basic-syntax/component-communication"
+              >Component Communication</a
+            >
+          </li>
         </ul>
       </li>
       <li
@@ -44,8 +52,8 @@
         nzOpen
         nzTitle="Router"
         nzIcon="block"
-        [(nzOpen)]="openMap['router']"
-        (nzOpenChange)="openHandler('router')"
+        [(nzOpen)]="openMap['routing']"
+        (nzOpenChange)="openHandler('routing')"
       >
         <ul>
           <li nz-menu-item nzMatchRouter>
@@ -67,8 +75,8 @@
         nzOpen
         nzTitle="HttpClient"
         nzIcon="swap"
-        [(nzOpen)]="openMap['http-client']"
-        (nzOpenChange)="openHandler('http-client')"
+        [(nzOpen)]="openMap['http']"
+        (nzOpenChange)="openHandler('http')"
       >
         <ul>
           <li nz-menu-item nzMatchRouter>

@@ -16,6 +16,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzMessageModule } from 'ng-zorro-antd/message';
 
 import { NgxEchartsModule } from 'ngx-echarts';
 
@@ -43,6 +45,9 @@ import { RxJSOperatorsComponent } from './rxjs/operators/operators.component';
 import { BasicSyntaxComponent } from './basic-syntax/basic-syntax.component';
 import { DirectiveComponent } from './basic-syntax/directive/directive.component';
 import { PipeComponent } from './basic-syntax/pipe/pipe.component';
+import { LifeCycleComponent } from './basic-syntax/lifecycle/lifecycle.component';
+import { ChildComponent } from './basic-syntax/component-communication/child.component';
+import { FatherComponent } from './basic-syntax/component-communication/father.component';
 
 registerLocaleData(en);
 
@@ -60,7 +65,10 @@ registerLocaleData(en);
     RxJSOperatorsComponent,
     BasicSyntaxComponent,
     DirectiveComponent,
+    LifeCycleComponent,
     PipeComponent,
+    ChildComponent,
+    FatherComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,6 +85,8 @@ registerLocaleData(en);
     NzButtonModule,
     NzCardModule,
     NzSpaceModule,
+    NzListModule,
+    NzMessageModule,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),

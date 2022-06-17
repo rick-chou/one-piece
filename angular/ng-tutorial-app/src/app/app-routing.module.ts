@@ -21,6 +21,8 @@ import { RxJSSubjectComponent } from './rxjs/subject/subject.component';
 import { BasicSyntaxComponent } from './basic-syntax/basic-syntax.component';
 import { DirectiveComponent } from './basic-syntax/directive/directive.component';
 import { PipeComponent } from './basic-syntax/pipe/pipe.component';
+import { LifeCycleComponent } from './basic-syntax/lifecycle/lifecycle.component';
+import { FatherComponent } from './basic-syntax/component-communication/father.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/welcome' },
@@ -44,6 +46,14 @@ const routes: Routes = [
       {
         path: 'pipe',
         component: PipeComponent,
+      },
+      {
+        path: 'lifecycle',
+        component: LifeCycleComponent,
+      },
+      {
+        path: 'component-communication',
+        component: FatherComponent,
       },
     ],
   },
