@@ -1,27 +1,62 @@
-> 本节的所有代码都在这个 👉<a href="https://github.com/LuckyChou710/code-traveling/tree/main/05-react-training-camp/tutorial/02_hooks">仓库</a>
+> 本节的所有代码都在这个 👉<a href="https://github.com/rick-chou/one-piece/tree/main/rxjs">仓库</a>
 
-## 时光机 👾
+## 背景
 
-- <a href="https://juejin.cn/post/6995070859840847902/">React 小册 ｜ 起底 JSX</a> ✅ ✅
+由于最近工作的变更 技术栈由 `React` 变成了 `Angular2.0+`
 
-- <a href="https://juejin.cn/post/6995440094341496868/">React 小册 ｜ 扬帆起航 基础语法 </a> ✅ ✅
+回想第一次接触 `Angular` 还是两年前的实习期 那时维护的是一个老项目 由 `angular1.0` 搭建
 
-- <a href="https://juejin.cn/post/6995840303814934565/">React 小册 ｜ 轻巧快艇 Hooks </a> ✅ ✅
+还记得那个项目 所有逻辑都由一个 `controller` 编写 一个 js 文件 就有 8000+ 的代码量
 
-- <a href="https://juejin.cn/post/7005088725923266567/">React 小册 ｜ CSS 解决方案</a> ✅ ✅
+而我也成功的完成了扩容了任务 两个月内达到了 10000+ 的容量 🤣
 
-- <a href="https://juejin.cn/post/6998718183674757134/">React 小册 ｜ 废旧立新 新老生命周期</a> ✅ ✅
+回到正题 以下是作者近两周学习 `Angular` 的笔记 （ PS: Angular 的官方文档写的真的不错 ｜ 对比隔壁 React 😅 )
 
-- <a href="https://juejin.cn/post/6999886777666240548/">React 小册 ｜ 状态管理 Redux</a> ✅ ✅
+因为官方文档已经相当详细了 所以这里我只摘录一些基本的用法 站在一个初学者的角度
 
-- <a href="https://juejin.cn/post/7005076296451489805/">React 小册 ｜ 状态管理 Redux 中间件</a> ✅ ✅
+希望能给想快速学习 `Angular` 的人有一些帮助
 
-- React 小册 ｜ 状态管理 Mobx
+下面附上一些 Links 希望对你的学习有帮助
 
-- <a href="https://juejin.cn/post/7005013415240400910/">React 小册 ｜ 路由管理</a> ✅ ✅
+> https://angular.io/ Angular 英文官网
 
-- <a href="https://juejin.cn/post/7012519532107399181">React 小册 ｜ Webpack ｜ Vite ｜ Snowpack</a> ✅ ✅
+> https://angular.cn/ Angular 中文官网 （ PS: 可以点击每一行来显示英语原文 也是学习英语的一个网站 🤣 )
 
-- React 小册 ｜ SSR
+> https://rxjs.dev/ RxJS 英文官网
 
-- <a href="https://juejin.cn/post/7001331980704940040/">React 小册 ｜ React 周边推荐</a> ✅ ✅
+> https://www.learnrxjs.io/ 可以作为官网的补充文档来看 对每一个 API 有非常详细的 DEMO
+
+> https://reactive.how/ 用动图的形式更加直观的介绍每一个 RxJS Operation 的工作流
+
+## 传送门 🌈
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ RxJS</a> ✅ ✅
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ 项目结构</a> ✅ ✅
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ 基础语法</a> ✅ ✅
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ Router</a> ✅ ✅
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ Service</a> ✅ ✅
+
+- <a href="https://juejin.cn/post/6995070859840847902/">Angular 小册 ｜ 一些生态</a> ✅ ✅
+
+## RxJS
+
+这里直接借用官方的一句话
+
+> 你可以把 RxJS 想象成处理事件的 Lodash
+
+Observable (可观察对象): 表示一个概念，这个概念是一个可调用的未来值或事件的集合。
+Observer (观察者): 一个回调函数的集合，它知道如何去监听由 Observable 提供的值。
+Subscription (订阅): 表示 Observable 的执行，主要用于取消 Observable 的执行。
+Operators (操作符): 采用函数式编程风格的纯函数 (pure function)，使用像 map、filter、concat、flatMap 等这样的操作符来处理集合。
+Subject (主体): 相当于 EventEmitter，并且是将值或事件多路推送给多个 Observer 的唯一方式。
+Schedulers (调度器): 用来控制并发并且是中央集权的调度员，允许我们在发生计算时进行协调，例如 setTimeout 或 requestAnimationFrame 或其他。
+
+## Observation
+
+## Subject
+
+## Operation
