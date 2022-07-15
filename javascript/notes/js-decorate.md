@@ -1,4 +1,4 @@
-> 项目地址 https://github.com/rick-chou/one-piece/tree/main/javascript/code/decorate
+> 项目地址 https://github.com/rick-chou/one-piece/tree/main/javascript/code/decorator
 
 ## 配置装饰器环境
 
